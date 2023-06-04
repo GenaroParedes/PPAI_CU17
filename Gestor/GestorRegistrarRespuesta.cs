@@ -95,7 +95,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
         private Estado enCurso { get; set; }
         public object InterfazRegistrarRespuesta { get; private set; }
 
-        public void buscarEstadoEnCurso()
+        /*public void buscarEstadoEnCurso()
         {
             foreach (Estado estado in this.estados)
             {
@@ -105,7 +105,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
                     break;
                 }
             }
-        }
+        }*/
 
         public List<string> buscarDatosLlamada(Llamada llamada)
         {
@@ -126,7 +126,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
 
             List<string> mensajes = llamada.categoria.getValidaciones(llamada.opcionLlamada, llamada.subOpcionLlamada, llamada.subOpcionLlamada.validaciones); // Mostrar
-
+            
             foreach (string mensaje in mensajes) datos.Add(mensaje);
 
             string fechaHora = obtenerFechaHoraActual();
@@ -152,6 +152,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             string correcta = llamada.cliente.buscarInfoCorrecta(llamada, validacion);
             return correcta;
         }
+
     }
 }
 

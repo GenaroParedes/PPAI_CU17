@@ -46,6 +46,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -171,7 +173,7 @@
             // textBox6
             // 
             this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(529, 350);
+            this.textBox6.Location = new System.Drawing.Point(681, 247);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(174, 20);
             this.textBox6.TabIndex = 45;
@@ -179,16 +181,17 @@
             // 
             // button2
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(530, 399);
+            this.button2.Location = new System.Drawing.Point(703, 299);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 39);
             this.button2.TabIndex = 46;
             this.button2.Text = "Confirmar Respuesta";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(703, 178);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 20);
@@ -217,17 +220,43 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(513, 177);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 51;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Enabled = false;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Accion 1",
+            "Accion 2",
+            "Accion 3"});
+            this.checkedListBox1.Location = new System.Drawing.Point(537, 238);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(74, 49);
+            this.checkedListBox1.TabIndex = 52;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(367, 254);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(153, 13);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Accion requerida por el cliente:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // InterfazRegistrarLlamada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(868, 359);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
@@ -269,10 +298,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Button button2;
     }
 }

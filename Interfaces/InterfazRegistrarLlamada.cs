@@ -65,17 +65,34 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             string correcta1 = datos[7];
             string correcta2 = datos[8];
 
-            
+            Random random = new Random();
+            DateTime[] fechas = new DateTime[2];
+            for (int i = 0; i < 2; i++)
+            {
+                int year = random.Next(1960, 2023);
+                int month = random.Next(1, 13);
+                int day = random.Next(1, 29);
+                fechas[i] = new DateTime(year, month, day);
+            }
+
+            List<string> fechas1 = new List<string>();
+            fechas1.Add(correcta2);
+            fechas1.Add(fechas[1].ToString("dd/MM/yyyy"));
+            fechas1.Add(fechas[0].ToString("dd/MM/yyyy"));
 
             comboBox1.Items.Add(correcta2);
-            comboBox1.Items.Add("Incorrecta");
+            comboBox1.Items.Add(fechas[0].ToString("dd/MM/yyyy"));
+            comboBox1.Items.Add(fechas[1].ToString("dd/MM/yyyy"));
 
             comboBox1.SelectedIndex = 0; //
 
-            
 
+            
+            int numero = int.Parse(correcta1);
+            int numero1 = int.Parse(correcta1);
             comboBox2.Items.Add(correcta1);
-            comboBox2.Items.Add("Incorrecta");
+            comboBox2.Items.Add(numero+(random.Next(1,9)));
+            comboBox2.Items.Add(numero1+(random.Next(1, 9)));
 
 
             comboBox2.SelectedIndex = 0; //
@@ -136,6 +153,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             if (bandera == true)
             {
                 MessageBox.Show("Verificación correcta");
+                comboBox2.Enabled = true;
+                button3.Enabled = true;
             }
             else
             {
@@ -153,11 +172,30 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             {
                 MessageBox.Show("Verificación correcta");
                 bool banderon = true;
+                checkedListBox1.Enabled = true;
+                textBox6.Enabled = true;
             }
             else
             {
                 MessageBox.Show("Verificación incorrecta");
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private object checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            object accionSeleccionada = checkedListBox1.SelectedItem;
+            button2.Enabled = true;
+            return accionSeleccionada;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //gestorRegistrarRespuesta.tomarRespuesta()
         }
     }
 }

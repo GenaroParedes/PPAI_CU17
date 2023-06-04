@@ -9,7 +9,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
     public class Estado
     {
         // Atributos
-        public string nombre { get; set; }  
+        public string nombre { get; set; }
 
         // Constructor
         public Estado(string nombre)
@@ -18,44 +18,59 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.nombre = nombre;
         }
 
-        //Metodos de Seteo
 
-        public void setNombre(string nombre)
+
+        public static Estado Iniciado { get; } = new Estado("Iniciada");
+        public static Estado EnCurso { get; } = new Estado("EnCurso");
+        public static Estado Finalizada { get; } = new Estado("Finalizada");
+
+        public static List<Estado> estados { get; } = new List<Estado>
         {
-            this.nombre = nombre;
-        }
+            Iniciado, EnCurso, Finalizada
+        };
+
 
         public string getNombre()
         {
             return this.nombre;
         }
 
-
         // Métodos
-        public bool esEnCurso()
+        public Estado esEnCurso()
         {
-            if (nombre.Equals("En Curso"))
-            { 
-                return true;
-            }
-            else
+            Estado estadoEnCurso = null;
+            foreach (var estado in estados)
             {
-                return  false;
+                if (estado.nombre == "EnCurso")
+                {
+                    estadoEnCurso = estado;
+                }
             }
-          
+            return estadoEnCurso;
         }
 
-        public bool esFinalizada()
+        public Estado esFinalizada()
         {
-            if (nombre.Equals("Finalizada"))
+            Estado estadoFinalizada = null;
+            foreach (var estado in estados)
+            {
+                if (estado.nombre == "Finalizada")
+                {
+                    estadoFinalizada = estado;
+                }
+            }
+            return estadoFinalizada;
+        }
+
+        public bool esIniciada()
+        {
+            if (this.nombre == "Ïniciada")
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
+       
     }
 
 }
