@@ -44,22 +44,22 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
 
         public void MostrarDNI(string dni)
         {
-            textBox1.Text = dni;
+            txtDNICliente.Text = dni;
         }
 
         public void MostrarCategoria(int categoria)
         {
-            textBox2.Text = categoria.ToString();
+            txtCategoria.Text = categoria.ToString();
         }
 
         public void MostrarOpcion(int opcion)
         {
-            textBox3.Text = opcion.ToString();
+            txtOpc.Text = opcion.ToString();
         }
 
         public void MostrarSubopcion(int subopcion)
         {
-            textBox4.Text = subopcion.ToString();
+            txtSubOpc.Text = subopcion.ToString();
         }
 
        
