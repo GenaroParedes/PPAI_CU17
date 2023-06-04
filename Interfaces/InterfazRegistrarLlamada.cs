@@ -1,4 +1,5 @@
-﻿using PPAI_CU17_GrupoYaNoNosFaltan2.Gestor;
+﻿using PPAI_CU17_GrupoYaNoNosFaltan2.Entidades;
+using PPAI_CU17_GrupoYaNoNosFaltan2.Gestor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,13 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
 
 
 
-        public InterfazRegistrarLlamada()
+        public InterfazRegistrarLlamada(Llamada llamada1, GestorRegistrarRespuesta gestor)
         {
             InitializeComponent();
+            Llamada llamada = llamada1;
+            button1.Tag = llamada;
+            button3.Tag = llamada;
+            gestorRegistrarRespuesta = gestor;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -125,11 +130,13 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
         }
 
         
+        
         private void button1_Click(object sender, EventArgs e)
         {
             string validacion = label6.Text;
             string respuestaCB1 = comboBox1.SelectedItem.ToString();
-            bool bandera = gestorRegistrarRespuesta.tomarOpValidacion(respuestaCB1, validacion);
+            Llamada llamada = (Llamada)button1.Tag;
+            bool bandera = gestorRegistrarRespuesta.tomarOpValidacion(respuestaCB1, validacion, llamada);
             if (bandera == true)
             {
                 MessageBox.Show("Verificación correcta");
@@ -144,7 +151,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
         {
             string validacion = label7.Text;
             string respuestaCB2 = comboBox2.SelectedItem.ToString();
-            bool bandera = gestorRegistrarRespuesta.tomarOpValidacion(respuestaCB2, validacion);
+            Llamada llamada = (Llamada)button3.Tag;
+            bool bandera = gestorRegistrarRespuesta.tomarOpValidacion(respuestaCB2, validacion, llamada);
             if (bandera)
             {
                 MessageBox.Show("Verificación correcta");
@@ -154,7 +162,5 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
                 MessageBox.Show("Verificación incorrecta");
             }
         }
-
-        
     }
 }

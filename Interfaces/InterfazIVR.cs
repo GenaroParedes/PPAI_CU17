@@ -69,7 +69,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
         private void button5_Click(object sender, EventArgs e)
         {
             Llamada llamada1 = gestorRegistrarLlamada.opcionNuevaRespuestaOperador();
-            this.gestorRegistrarRespuesta.nuevaRespuestaOperador(llamada1);
+            this.gestorRegistrarRespuesta.nuevaRespuestaOperador(llamada1, gestorRegistrarRespuesta);
             this.Show();
         }
     }

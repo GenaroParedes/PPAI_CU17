@@ -55,3 +55,15 @@ C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17_GrupoYaNoNosFaltan2\obj
 C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17_GrupoYaNoNosFaltan2\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17_GrupoYaNoNosFaltan2\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
 C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17_GrupoYaNoNosFaltan2\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe.config
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.AssemblyReference.cache
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.SuggestedBindingRedirects.cache
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1.InterfazIVR.resources
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces.InterfazRegistrarLlamada.resources
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Properties.Resources.resources
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.GenerateResource.cache
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CoreCompileInputs.cache
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+B:\UTN\Tercer año\Diseño de sistemas de información\PPAI\PPAI_CU17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb

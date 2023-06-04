@@ -39,9 +39,13 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
             TipoInformacion tipoInfoFechaNac = new TipoInformacion("Fecha de Nacimiento:", "Es la fecha de nacimiento del cliente");
 
+            TipoInformacion tipoInfoCodPostal = new TipoInformacion("Codigo postal:", "Es el codigo postal del cliente");
+
             Validacion validacion1 = new Validacion("Audio", "Cantidad de hijos: ", 1, tipoInfoCantHijos);
 
             Validacion validacion2 = new Validacion("Audio", "Fecha Nacimiento: ", 1, tipoInfoFechaNac);
+
+            Validacion validacion3 = new Validacion("Audio", "Codigo postal", 1, tipoInfoCodPostal);
 
             List<Validacion> validaciones = new List<Validacion>();
             validaciones.Add(validacion1);
@@ -54,6 +58,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
            
             InformacionCliente infoClienteFechaNac = new InformacionCliente("22/09/2000", validacion2, tipoInfoFechaNac);
             informacionClientes.Add(infoClienteFechaNac);
+
+            InformacionCliente infoClienteCodPostal = new InformacionCliente("5000", validacion3, tipoInfoCodPostal);
 
             SubOpcionLlamada subOpcion = new SubOpcionLlamada("Hablar con operador", 1, validaciones);
             List<SubOpcionLlamada> listaSubOpciones = new List<SubOpcionLlamada>();
@@ -86,7 +92,12 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             interfaz.MostrarCategoria(categoria.nroOrden);
             interfaz.MostrarOpcion(opcionLlamada1.nroOrden);
             interfaz.MostrarSubopcion(subOpcion.nroOrden);
-
+            Console.WriteLine(informacionClientes.Count());
+            
+            foreach (InformacionCliente infoCliente in informacionClientes)
+            {
+                Console.WriteLine(infoCliente.datoAValidar);
+            }
             return llamada;
         }
        

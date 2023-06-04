@@ -66,14 +66,16 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         // Métodos
         
         
-        public bool esInformacionCorrecta(string info, string validacion)
+        public bool esInformacionCorrecta(string info, string validacion, Llamada llamada)
         {
             bool bandera = false;
-            foreach (InformacionCliente informacionCliente in this.informacionCliente)
+            Console.WriteLine(llamada.cliente.informacionCliente.Count);
+            foreach (InformacionCliente infoCliente in llamada.cliente.informacionCliente)
             {
-                if (informacionCliente.esValidacion(validacion))
+                Console.WriteLine(infoCliente.datoAValidar);
+                /*if (informacionCliente.esValidacion(validacion, llamada))
                 {   
-                    if(informacionCliente.esInformacionCorrecta(info))
+                    if(informacionCliente.esInformacionCorrecta(info, llamada))
                     {
                         bandera = true;
                     }
@@ -85,7 +87,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
                 else
                 {
                     
-                }
+                }*/
             }
             return bandera;
         }

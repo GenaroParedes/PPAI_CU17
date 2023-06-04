@@ -21,6 +21,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
         {
             this.fechaHoraActual = obtenerFechaHoraActual();
             this.interfazRegistrarLlamada = interfazRegistrarLlamada;
+            
         }
         public GestorRegistrarRespuesta(string datosLlamada, string fechaHoraActual, string respuestaSeleccionada, string opValidacion)
         {
@@ -76,19 +77,15 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
            // this.confirmacionSeleccionada = true;
         }
 
-        public void nuevaRespuestaOperador(Llamada llamada1)
+        public void nuevaRespuestaOperador(Llamada llamada1, GestorRegistrarRespuesta gestorRegistrarRespuesta)
         {
-            
-            
+
             //estado = buscarEstadoEnCurso();
             string tiempo = this.obtenerFechaHoraActual();
             List<string> datos = buscarDatosLlamada(llamada1);
             //tomadaPorOperador(tiempo, estado);
-            InterfazRegistrarLlamada interfazRegistrarLlamada = new InterfazRegistrarLlamada();
+            InterfazRegistrarLlamada interfazRegistrarLlamada = new InterfazRegistrarLlamada(llamada1, gestorRegistrarRespuesta);
             interfazRegistrarLlamada.mostrarDatos(datos);
-           
-
-
         }
 
 
@@ -142,14 +139,13 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             return datos;
         }
 
-        
-        public bool tomarOpValidacion(string respuesta, string validacion)
+        public bool tomarOpValidacion(string respuesta, string validacion,Llamada llamada)
         {
-            bool bandera = llamada.validarInformacionCliente(respuesta, validacion);
+            bool bandera = llamada.validarInformacionCliente(respuesta, validacion, llamada);
             return bandera;
         }
         
-       
+        
     }
 }
 

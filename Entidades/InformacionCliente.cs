@@ -41,11 +41,11 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 
         // Métodos
        
-        public bool esValidacion(string val)
+        public bool esValidacion(string val, Llamada llamada)
         {
             bool bandera = false;
             Console.WriteLine(val);
-            Console.WriteLine(this.validacion.nombre);
+            Console.WriteLine(llamada.opcionLlamada.validacion[0].nombre);
             if (val == this.validacion.nombre)
             {
                 bandera = true;
@@ -53,7 +53,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             return bandera;
         }   
 
-        public bool esInformacionCorrecta(string info)
+        public bool esInformacionCorrecta(string info, Llamada llamada)
         {
             bool bandera = false;
             if(info == this.datoAValidar)

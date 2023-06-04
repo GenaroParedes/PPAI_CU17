@@ -108,9 +108,10 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         }
 
         
-        public bool validarInformacionCliente(string info, string validacion)
+        public bool validarInformacionCliente(string info, string validacion, Llamada llamada)
         {
-            bool bandera = cliente.esInformacionCorrecta(info, validacion);
+            
+            bool bandera = llamada.cliente.esInformacionCorrecta(info, validacion, llamada);
             return bandera;
         }
         
