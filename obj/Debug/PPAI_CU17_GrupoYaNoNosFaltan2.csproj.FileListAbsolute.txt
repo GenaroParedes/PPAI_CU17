@@ -79,3 +79,15 @@ C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17\obj\Debug\PPAI_CU17_Gru
 C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
 C:\Users\Usuario\Agus\Facu\implementacionCU-17\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.AssemblyReference.cache
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1.InterfazIVR.resources
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces.InterfazRegistrarLlamada.resources
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Properties.Resources.resources
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.GenerateResource.cache
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe.config
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb

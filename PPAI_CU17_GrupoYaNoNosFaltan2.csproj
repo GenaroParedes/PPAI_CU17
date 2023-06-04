@@ -56,6 +56,7 @@
     <Compile Include="Entidades\SubOpcionLlamada.cs" />
     <Compile Include="Entidades\TipoInformacion.cs" />
     <Compile Include="Entidades\Validacion.cs" />
+    <Compile Include="Gestor\GestorCU28.cs" />
     <Compile Include="Gestor\GestorRegistrarLlamada.cs" />
     <Compile Include="Gestor\GestorRegistrarRespuesta.cs" />
     <Compile Include="Interfaces\InterfazIVR.cs">

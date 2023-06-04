@@ -96,12 +96,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
 
 
             comboBox2.SelectedIndex = 0; //
-
-
-
-
-
-            this.Show();
+            this.ShowDialog();
 
         }
 
@@ -111,10 +106,10 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             return respuestaCB1;
         }
 
-        public object comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        public string comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            object respuestaC2 = comboBox2.SelectedItem;
-            return respuestaC2;
+            string respuestaCB2 = (string)comboBox2.SelectedItem;
+            return respuestaCB2;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -171,8 +166,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             if (bandera)
             {
                 MessageBox.Show("Verificación correcta");
-                bool banderon = true;
-                checkedListBox1.Enabled = true;
+                
                 textBox6.Enabled = true;
             }
             else
@@ -186,16 +180,28 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
 
         }
 
-        private object checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            object accionSeleccionada = checkedListBox1.SelectedItem;
-            button2.Enabled = true;
-            return accionSeleccionada;
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            //gestorRegistrarRespuesta.tomarRespuesta()
+            gestorRegistrarRespuesta.tomarRespuesta(textBox6.Text);
+            string acc = gestorRegistrarRespuesta.tomarAccion(comboBox3.SelectedItem.ToString());
+            button2.Enabled = true;
+            DialogResult result = MessageBox.Show("¿Quieres confirmar la respuesta?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Respuesta confirmada", "Confirmación");
+                gestorRegistrarRespuesta.tomarConfirmacion(acc);
+            }
         }
-    }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }   
 }

@@ -36,30 +36,28 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         }
 
         // Métodos
-        public Estado esEnCurso()
+        public static Estado esEnCurso()
         {
-            Estado estadoEnCurso = null;
-            foreach (var estado in estados)
+            foreach (Estado estado in estados)
             {
                 if (estado.nombre == "EnCurso")
                 {
-                    estadoEnCurso = estado;
+                    return estado;
                 }
             }
-            return estadoEnCurso;
+            return null;
         }
 
-        public Estado esFinalizada()
+        public static Estado esFinalizada()
         {
-            Estado estadoFinalizada = null;
-            foreach (var estado in estados)
+            foreach (Estado estado in estados)
             {
                 if (estado.nombre == "Finalizada")
                 {
-                    estadoFinalizada = estado;
+                    return estado;
                 }
             }
-            return estadoFinalizada;
+            return null;
         }
 
         public bool esIniciada()

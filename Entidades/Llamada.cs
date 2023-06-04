@@ -1,9 +1,11 @@
 ﻿using PPAI_CU17_GrupoYaNoNosFaltan2.Entidades;
+using PPAI_CU17_GrupoYaNoNosFaltan2.Gestor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 {
@@ -92,13 +94,11 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 
 
         // Métodos
-        public void tomadaPorOperador(DateTime fechaHoraActual)
+        public void tomadaPorOperador(Estado estado, string fechaHoraActual)
         {
-            // Implementación del método
-            // Tiene que tener por parámetros la fecha hora actual y el nombre del estado, y luego 
-            // tiene que llamar a new CambioEstado con esos parámetros. Para que se cree con esa fechaHoraActual y ese
-            // estado, (Que sería "En Curso").
-            //CambioEstado cambioEstado_2 = new CambioEstado(fechaHoraActual, );
+            DateTime fechaFormateada = DateTime.Parse(fechaHoraActual);
+            CambioEstado nuevoCE = new CambioEstado(fechaFormateada, estado);
+            cambioDeEstado.Add(nuevoCE);
         }
 
         public string getCliente()
@@ -115,14 +115,19 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             return bandera;
         }
         
-        public void CalcularDuracion()
+        public void CalcularDuracion(string fechaHoraEnCurso, string fechaHoraFinalizada)
         {
-            // Implementación del método
+            DateTime Inicio = DateTime.Parse(fechaHoraEnCurso);
+            DateTime Fin = DateTime.Parse(fechaHoraFinalizada);
+            this.duracion = Fin - Inicio;
         }
 
-        public void finalizar()
+        public void finalizar(Estado estado, string fechaHoraActual, string respuesta)
         {
-            // Implementación del método
+            this.descripcionOperador = respuesta;
+            DateTime fechaFormateada = DateTime.Parse(fechaHoraActual);
+            CambioEstado nuevoCE = new CambioEstado(fechaFormateada, estado);
+            cambioDeEstado.Add(nuevoCE);
         }
     }
 

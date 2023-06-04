@@ -82,10 +82,11 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             DateTime tiempo1 = new DateTime(1, 1, 1, 1, 1, 1);
 
             CambioEstado cambioEstado = new CambioEstado(tiempo1, estado);
-
+            List<CambioEstado> historialEstados = new List<CambioEstado>();
+            historialEstados.Add(cambioEstado);
             Llamada llamada = new Llamada("Sin descripción", "Sin acción req", TimeSpan.Zero, false, "Sin observación",
                      cliente, subOpcion, opcionLlamada1,
-            null, categoria);
+            historialEstados, categoria);
 
             
 
