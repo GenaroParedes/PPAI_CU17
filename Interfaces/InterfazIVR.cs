@@ -28,8 +28,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
             
             gestorRegistrarLlamada = new GestorRegistrarLlamada(this);
             gestorRegistrarRespuesta = new GestorRegistrarRespuesta(this);
-              
-            
+
+
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 

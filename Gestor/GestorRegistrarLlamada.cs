@@ -75,7 +75,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             Categoria categoria = new Categoria("Audio", "Informar robo y solicitar tarjeta 1. Informar robo y anular tarjeta 2.",
                     "Informar robo", 1, listaOpciones);
 
-            Cliente cliente = new Cliente("12345678", "Juan Pérez", "9q9999", informacionClientes);
+            Cliente cliente = new Cliente("23097372", "Juan Pérez", "9q9999", informacionClientes);
 
             Estado estado = new Estado("Iniciada");
 

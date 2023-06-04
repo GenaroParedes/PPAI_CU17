@@ -173,10 +173,12 @@
             // textBox6
             // 
             this.textBox6.Enabled = false;
+            this.textBox6.ForeColor = System.Drawing.Color.Gray;
             this.textBox6.Location = new System.Drawing.Point(379, 237);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(174, 20);
             this.textBox6.TabIndex = 45;
+            this.textBox6.Text = "Descripcion";
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button2
@@ -240,6 +242,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "accion 1",

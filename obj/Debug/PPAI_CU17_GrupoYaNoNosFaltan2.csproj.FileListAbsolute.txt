@@ -91,3 +91,15 @@ C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNos
 C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe.config
 C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
 C:\Users\Usuario\Agus\Facu\NUEVO REPO\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe.config
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.AssemblyReference.cache
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1.InterfazIVR.resources
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces.InterfazRegistrarLlamada.resources
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Properties.Resources.resources
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.GenerateResource.cache
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CoreCompileInputs.cache
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+C:\Users\Pato\Documents\ING EN SISTEMAS\2023\3K3\DSI\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb

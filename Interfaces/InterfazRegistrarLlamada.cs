@@ -28,6 +28,14 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             button1.Tag = llamada1;
             button3.Tag = llamada1;
             gestorRegistrarRespuesta = gestor;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.KeyPress += ComboBox_KeyPress;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.KeyPress += ComboBox_KeyPress;
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox3.KeyPress += ComboBox_KeyPress;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,10 +44,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
         }
        
 
-        private void InterfazRegistrarLlamada_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -83,7 +88,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             comboBox1.Items.Add(correcta2);
             comboBox1.Items.Add(fechas[0].ToString("dd/MM/yyyy"));
             comboBox1.Items.Add(fechas[1].ToString("dd/MM/yyyy"));
-
+            
+                
             comboBox1.SelectedIndex = 0; //
 
 
@@ -168,6 +174,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
                 MessageBox.Show("Verificación correcta");
                 
                 textBox6.Enabled = true;
+                comboBox3.Enabled = true;
             }
             else
             {
@@ -194,14 +201,50 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             }
         }
 
+        private void VerificarHabilitarButton2()
+        {
+            bool accionSeleccionada = comboBox3.SelectedItem != null;
+            bool textoIngresado = textBox6.Text.Trim() != "Descripcion";
+            button2.Enabled = accionSeleccionada && textoIngresado;
+        }
+
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            VerificarHabilitarButton2();
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+            VerificarHabilitarButton2();
+        }
+
+        private void textBox6_Enter(object sender, EventArgs e)
+        {
+            if (textBox6.Text == "Descripcion")
+            {
+                textBox6.Text = string.Empty;
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                textBox6.Text = "Descripcion";
+            }
+        }
+
+        private void ComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true; // Bloquear la edición y eliminación del texto
+        }
+
+
+
+
+        private void InterfazRegistrarLlamada_Load(object sender, EventArgs e)
+        {
 
         }
-    }   
+    }
 }
