@@ -26,14 +26,10 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
         // relaciones
         public InterfazIVR interfazIVR;
         public GestorRegistrarRespuesta gestorRegistrarRespuesta;
-        public InterfazRegistrarLlamada interfazRegistrarLlamada;
+        public InterfazRegistrarRespuesta interfazRegistrarLlamada;
         
-
-
-        // Llamada primeraLlamada = new Llamada(null, null, TimeSpan.Zero, false, null, null, null, null);
-
-        
-        public Llamada opcionNuevaRespuestaOperador()
+        // Instanciamos los objetos a forma de simulación:
+        public (Llamada, Categoria) opcionNuevaRespuestaOperador()
         {    
             TipoInformacion tipoInfoCantHijos = new TipoInformacion("Cantidad de Hijos:", "Es la cantidad de hijos del cliente");
 
@@ -85,8 +81,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             List<CambioEstado> historialEstados = new List<CambioEstado>();
             historialEstados.Add(cambioEstado);
             Llamada llamada = new Llamada("Sin descripción", "Sin acción req", TimeSpan.Zero, false, "Sin observación",
-                     cliente, subOpcion, opcionLlamada1,
-            historialEstados, categoria);
+                     cliente, subOpcion, opcionLlamada1, historialEstados);
 
             
 
@@ -95,7 +90,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             interfaz.MostrarCategoria(categoria.nroOrden);
             interfaz.MostrarOpcion(opcionLlamada1.nroOrden);
             interfaz.MostrarSubopcion(subOpcion.nroOrden);       
-            return llamada;
+            return (llamada, categoria);
         }
        
     }

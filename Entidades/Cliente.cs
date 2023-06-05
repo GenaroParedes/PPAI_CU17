@@ -17,9 +17,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         // Relación
         public List<InformacionCliente> informacionCliente { get; set; }
 
-
-
-
         // Constructor
         public Cliente(string dni, string nombreCompleto, string numeroCelular, List<InformacionCliente> informacionCliente)
         {
@@ -32,9 +29,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.informacionCliente = informacionCliente; // Cambiado por el new
         }
 
-
         //Metodos de Seteo
-
         public void setDni(string dni)
         {
             this.dni = dni;
@@ -65,8 +60,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         }
 
         // Métodos
-        
-        
+          
         public bool esInformacionCorrecta(string info, string validacion, Llamada llamada)
         {
             bool bandera = false;
@@ -108,13 +102,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
                 }
             }
             return correcta;
-        }
-        
+        } 
     } 
-
-
-    
-
 }
 
 

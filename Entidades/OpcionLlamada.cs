@@ -82,6 +82,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             var datos = (subOpcionSeleccionada, nombreOpcion);
             return datos;
         }
+
         public List<string> getValidaciones(SubOpcionLlamada subOpcionLlamada, List<Validacion> validaciones)
         {
             // Implementación del método

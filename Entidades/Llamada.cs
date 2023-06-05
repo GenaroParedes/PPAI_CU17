@@ -23,11 +23,12 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         public SubOpcionLlamada subOpcionLlamada { get; set; }
         public OpcionLlamada opcionLlamada { get; set; }
         public List<CambioEstado> cambioDeEstado { get; set; }
-        public Categoria categoria { get; set; }
 
         // Constructor
-        public Llamada(string descripcionOperador, string detalleAccionRequerida, TimeSpan duracion, bool encuestaEnviada, string observacionAuditor, Cliente cliente, SubOpcionLlamada subOpcionLlamada, OpcionLlamada opcionLlamada, List<CambioEstado> cambioDeEstado,
-            Categoria categoria)
+        public Llamada(string descripcionOperador, string detalleAccionRequerida, TimeSpan duracion,
+            bool encuestaEnviada, string observacionAuditor, Cliente cliente,
+            SubOpcionLlamada subOpcionLlamada, OpcionLlamada opcionLlamada,
+            List<CambioEstado> cambioDeEstado)
         {
             // Inicializar atributos
             this.descripcionOperador = descripcionOperador;
@@ -41,7 +42,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.subOpcionLlamada = subOpcionLlamada;
             this.opcionLlamada = opcionLlamada;
             this.cambioDeEstado = cambioDeEstado; // Cambiado por el new
-            this.categoria = categoria;
         }
         //Metodos de Seteo
 
@@ -77,7 +77,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         {
             this.encuestaEnviada = encuestaEnviada;
         }
-
         public bool getEncuestaEnviada()
         {
             return this.encuestaEnviada;
@@ -91,7 +90,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         {
             return this.observacionAuditor;
         }
-
 
         // Métodos
         public void tomadaPorOperador(Estado estado, string fechaHoraActual)
@@ -107,7 +105,12 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             return nom;
         }
 
-        
+        public string buscarInfoCorrecta(Llamada llamada, string validacion)
+        {
+            string correcta = llamada.cliente.buscarInfoCorrecta(llamada, validacion);
+            return correcta;
+        }
+
         public bool validarInformacionCliente(string info, string validacion, Llamada llamada)
         {
             
@@ -115,13 +118,12 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             return bandera;
         }
         
-        public void CalcularDuracion(string fechaHoraEnCurso, string fechaHoraFinalizada)
+        public void calcularDuracion(string fechaHoraEnCurso, string fechaHoraFinalizada)
         {
             DateTime Inicio = DateTime.Parse(fechaHoraEnCurso);
             DateTime Fin = DateTime.Parse(fechaHoraFinalizada);
             this.duracion = Fin - Inicio;
         }
-
         public void finalizar(Estado estado, string fechaHoraActual, string respuesta)
         {
             this.descripcionOperador = respuesta;

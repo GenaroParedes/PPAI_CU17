@@ -17,11 +17,11 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
         public string respuestaSeleccionada { get; set; }
         public string opValidacion { get; set; }
 
-        public GestorRegistrarRespuesta(InterfazRegistrarLlamada interfazRegistrarLlamada)
+        public GestorRegistrarRespuesta(InterfazRegistrarRespuesta interfazRegistrarLlamada)
         {
             this.fechaHoraActual = obtenerFechaHoraActual();
             this.interfazRegistrarLlamada = interfazRegistrarLlamada;
-            
+
         }
         public GestorRegistrarRespuesta(List<string> datosLlamada, string fechaHoraActual, string respuestaSeleccionada, string opValidacion)
         {
@@ -38,7 +38,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
 
         //Relaciones
-        public InterfazRegistrarLlamada interfazRegistrarLlamada;
+        public InterfazRegistrarRespuesta interfazRegistrarLlamada;
         public GestorRegistrarLlamada gestorRegistrarLlamada;
         public Llamada llamada;
         public Categoria categoria;
@@ -55,52 +55,43 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             return fechaHoraString;
         }
 
-        public void TomarOpcionValidacion(string opcionValidacionSeleccionada)
-        {
-            this.opValidacion = opcionValidacionSeleccionada;
-        }
-
-        public void TomarConfirmacion()
-        {
-           // this.confirmacionSeleccionada = true;
-        }
-
-        public void nuevaRespuestaOperador(Llamada llamada1, GestorRegistrarRespuesta gestorRegistrarRespuesta)
+        // El controlador recibe los datos de la llamada e inicia la ejecución del CU:
+        public void nuevaRespuestaOperador(Llamada llamada1, Categoria categoria, GestorRegistrarRespuesta gestorRegistrarRespuesta)
         {
             Estado estado = Estado.esEnCurso();
             string tiempo1 = obtenerFechaHoraActual();
             llamada1.tomadaPorOperador(estado, tiempo1);
-            buscarDatosLlamada(llamada1);
-            InterfazRegistrarLlamada interfazRegistrarLlamada = new InterfazRegistrarLlamada(llamada1, gestorRegistrarRespuesta);
+            buscarDatosLlamada(llamada1, categoria);
+            InterfazRegistrarRespuesta interfazRegistrarLlamada = new InterfazRegistrarRespuesta(llamada1, gestorRegistrarRespuesta);
             interfazRegistrarLlamada.mostrarDatos(datosLlamada);
             // Cuando se cierre la interfaz:
             estado = Estado.esFinalizada();
             string tiempo2 = obtenerFechaHoraActual();
-            llamada1.CalcularDuracion(tiempo1, tiempo2);
+            llamada1.calcularDuracion(tiempo1, tiempo2);
             llamada1.finalizar(estado, tiempo2, respuestaSeleccionada); // se crea el estado finalizada
             finCU();
         }
 
-        public void buscarDatosLlamada(Llamada llamada)
+        public void buscarDatosLlamada(Llamada llamada, Categoria categoria)
         {
             this.datosLlamada = new List<string>();
 
             string nombreCliente = llamada.getCliente(); // Mostrar
             datosLlamada.Add(nombreCliente);
-;
+            ;
 
-            ((int, string), string) tupla = llamada.categoria.getDescripcionCategoriaYOpcion(llamada.opcionLlamada, llamada.subOpcionLlamada);
+            ((int, string), string) tupla = categoria.getDescripcionCategoriaYOpcion(llamada.opcionLlamada, llamada.subOpcionLlamada);
 
             string nombreCate = tupla.Item1.Item2; // Mostrar
             datosLlamada.Add(nombreCate);
             string nombreOpcion = tupla.Item1.Item2; // Mostrar
-            datosLlamada.Add(nombreOpcion);    
+            datosLlamada.Add(nombreOpcion);
             int nroOrden = tupla.Item1.Item1; // Mostrar
             datosLlamada.Add(nroOrden.ToString());
 
 
-            List<string> mensajes = llamada.categoria.getValidaciones(llamada.opcionLlamada, llamada.subOpcionLlamada, llamada.subOpcionLlamada.validaciones); // Mostrar
-            
+            List<string> mensajes = categoria.getValidaciones(llamada.opcionLlamada, llamada.subOpcionLlamada, llamada.subOpcionLlamada.validaciones); // Mostrar
+
             foreach (string mensaje in mensajes) datosLlamada.Add(mensaje);
 
             string fechaHora = obtenerFechaHoraActual();
@@ -108,7 +99,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
             foreach (string mensaje in mensajes)
             {
-                this.opValidacion = buscarInfoCorrecta(llamada, mensaje);
+                this.opValidacion = llamada.cliente.buscarInfoCorrecta(llamada, mensaje);
                 datosLlamada.Add(opValidacion);
             }
         }
@@ -117,12 +108,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
         {
             bool bandera = llamada.validarInformacionCliente(respuesta, validacion, llamada);
             return bandera;
-        }
-
-        public string buscarInfoCorrecta(Llamada llamada, string validacion)
-        {
-            string correcta = llamada.cliente.buscarInfoCorrecta(llamada, validacion);
-            return correcta;
         }
 
         public void tomarRespuesta(string res)
@@ -140,13 +125,19 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
         public void tomarConfirmacion(string accion)
         {
+            llamadaCU28(accion);
+        }
+
+        public void llamadaCU28(string accion)
+        {
+            // Retornaría true si la llamada se ejecuta con éxito y false en el caso contrario.
             GestorCU28 gestorCU28 = new GestorCU28(accion);
             MessageBox.Show("CU28 finalizado exitosamente!");
         }
 
         public void finCU()
         {
-            MessageBox.Show("Respuesta operador registrada exitosamente!");
+
         }
     }
 }

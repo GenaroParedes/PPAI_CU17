@@ -15,8 +15,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
 {
     public partial class InterfazIVR : Form
     {
-
-
         //Relaciones
 
         public GestorRegistrarLlamada gestorRegistrarLlamada;
@@ -36,12 +34,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
 
         private void InterfazIVR_Load(object sender, EventArgs e)
         {
-            Llamada llamada1 = gestorRegistrarLlamada.opcionNuevaRespuestaOperador();
+            (Llamada llamada, Categoria categoria) = gestorRegistrarLlamada.opcionNuevaRespuestaOperador();
 
         }
-
-      
-
 
         public void MostrarDNI(string dni)
         {
@@ -63,15 +58,16 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
             textBox4.Text = subopcion.ToString();
         }
 
-       
-
-     
-
+        // Con este botón simulamos que el cliente selecciona la opción Hablar con operador:
         private void button5_Click(object sender, EventArgs e)
         {
-            Llamada llamada1 = gestorRegistrarLlamada.opcionNuevaRespuestaOperador();
-            this.gestorRegistrarRespuesta.nuevaRespuestaOperador(llamada1, gestorRegistrarRespuesta);
-            this.Show();
+            (Llamada llamada1, Categoria categoria) = gestorRegistrarLlamada.opcionNuevaRespuestaOperador();
+            this.gestorRegistrarRespuesta.nuevaRespuestaOperador(llamada1,categoria, gestorRegistrarRespuesta);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

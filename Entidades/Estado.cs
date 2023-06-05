@@ -18,8 +18,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.nombre = nombre;
         }
 
-
-
         public static Estado Iniciado { get; } = new Estado("Iniciada");
         public static Estado EnCurso { get; } = new Estado("EnCurso");
         public static Estado Finalizada { get; } = new Estado("Finalizada");
@@ -28,7 +26,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         {
             Iniciado, EnCurso, Finalizada
         };
-
 
         public string getNombre()
         {

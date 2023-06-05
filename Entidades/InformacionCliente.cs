@@ -38,9 +38,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             return this.datoAValidar;
         }
 
-
-        // Métodos
-       
+        // Métodos      
         public bool esValidacion(string val)
         {
             bool bandera = false;
@@ -60,9 +58,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
                 bandera = true;
             }
             return bandera;
-        }
-       
-        
+        }              
     }
 }   
 

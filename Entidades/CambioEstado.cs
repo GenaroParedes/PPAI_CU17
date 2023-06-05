@@ -35,7 +35,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             return fechaHoraInicio;
         }
 
-
         public string getNombreEstado()
         {
             // Implementación del método

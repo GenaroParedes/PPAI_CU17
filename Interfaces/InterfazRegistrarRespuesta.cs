@@ -13,15 +13,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
 {
-    public partial class InterfazRegistrarLlamada : Form    
+    public partial class InterfazRegistrarRespuesta : Form    
     {
-
         //Relaciones
         public GestorRegistrarRespuesta gestorRegistrarRespuesta { get; set; }
 
-
-
-        public InterfazRegistrarLlamada(Llamada llamada1, GestorRegistrarRespuesta gestor)
+        public InterfazRegistrarRespuesta(Llamada llamada1, GestorRegistrarRespuesta gestor)
         {
             InitializeComponent();
             Llamada llamada = llamada1;
@@ -35,16 +32,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.KeyPress += ComboBox_KeyPress;
             this.StartPosition = FormStartPosition.CenterScreen;
-
+            textBox6.Enter += textBox6_Enter;
+            textBox6.Leave += textBox6_Leave;
         }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-       
-
-        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -87,12 +77,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
 
             comboBox1.Items.Add(correcta2);
             comboBox1.Items.Add(fechas[0].ToString("dd/MM/yyyy"));
-            comboBox1.Items.Add(fechas[1].ToString("dd/MM/yyyy"));
-            
+            comboBox1.Items.Add(fechas[1].ToString("dd/MM/yyyy"));           
                 
             comboBox1.SelectedIndex = 0; //
-
-
             
             int numero = int.Parse(correcta1);
             int numero1 = int.Parse(correcta1);
@@ -100,10 +87,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             comboBox2.Items.Add(numero+(random.Next(1,9)));
             comboBox2.Items.Add(numero1+(random.Next(1, 9)));
 
-
             comboBox2.SelectedIndex = 0; //
             this.ShowDialog();
-
         }
 
         public string comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,8 +127,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
         {
 
         }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -198,6 +181,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             {
                 MessageBox.Show("Respuesta confirmada", "Confirmación");
                 gestorRegistrarRespuesta.tomarConfirmacion(acc);
+                MessageBox.Show("Respuesta operador registrada exitosamente!");
+                this.Close();
+                gestorRegistrarRespuesta.interfazIVR.Close();
             }
         }
 
@@ -220,7 +206,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
 
         private void textBox6_Enter(object sender, EventArgs e)
         {
-            if (textBox6.Text == "Descripcion")
+            if (textBox6.Text == "Descripcion.")
             {
                 textBox6.Text = string.Empty;
             }
@@ -230,7 +216,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
         {
             if (string.IsNullOrWhiteSpace(textBox6.Text))
             {
-                textBox6.Text = "Descripcion";
+                textBox6.Text = "Descripcion.";
             }
         }
 
@@ -239,10 +225,25 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             e.Handled = true; // Bloquear la edición y eliminación del texto
         }
 
-
-
-
         private void InterfazRegistrarLlamada_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("CU 17 cancelado por llamada cortada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Cerrar el formulario
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

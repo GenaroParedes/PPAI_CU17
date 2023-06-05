@@ -29,9 +29,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 
             // Inicializar relación
             this.opciones = opciones;
-            
         }
-
 
         //Metodos de Seteo
 
