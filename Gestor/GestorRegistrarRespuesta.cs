@@ -78,7 +78,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             string tiempo2 = obtenerFechaHoraActual();
             llamada1.CalcularDuracion(tiempo1, tiempo2);
             llamada1.finalizar(estado, tiempo2, respuestaSeleccionada); // se crea el estado finalizada
-            finCU();
+            //finCU();
         }
 
         public void buscarDatosLlamada(Llamada llamada)
@@ -146,7 +146,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
         public void finCU()
         {
-            MessageBox.Show("Respuesta operador registrada exitosamente!");
+           
         }
     }
 }

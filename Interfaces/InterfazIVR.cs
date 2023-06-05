@@ -71,7 +71,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
         {
             Llamada llamada1 = gestorRegistrarLlamada.opcionNuevaRespuestaOperador();
             this.gestorRegistrarRespuesta.nuevaRespuestaOperador(llamada1, gestorRegistrarRespuesta);
-            this.Show();
+            //this.Show();
+            
         }
     }
 

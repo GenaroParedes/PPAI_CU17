@@ -1,5 +1,6 @@
 ﻿using PPAI_CU17_GrupoYaNoNosFaltan2.Entidades;
 using PPAI_CU17_GrupoYaNoNosFaltan2.Gestor;
+using PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
 {
     public partial class InterfazRegistrarLlamada : Form    
     {
-
         //Relaciones
         public GestorRegistrarRespuesta gestorRegistrarRespuesta { get; set; }
 
@@ -35,6 +35,8 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.KeyPress += ComboBox_KeyPress;
             this.StartPosition = FormStartPosition.CenterScreen;
+            textBox6.Enter += textBox6_Enter;
+            textBox6.Leave += textBox6_Leave;
 
         }
 
@@ -192,12 +194,17 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             gestorRegistrarRespuesta.tomarRespuesta(textBox6.Text);
             string acc = gestorRegistrarRespuesta.tomarAccion(comboBox3.SelectedItem.ToString());
             button2.Enabled = true;
-            DialogResult result = MessageBox.Show("¿Quieres confirmar la respuesta?", "Confirmación", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("¿Quieres confirmar la respuesta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
                 MessageBox.Show("Respuesta confirmada", "Confirmación");
                 gestorRegistrarRespuesta.tomarConfirmacion(acc);
+                MessageBox.Show("Respuesta operador registrada exitosamente!");
+                this.Close();
+                gestorRegistrarRespuesta.interfazIVR.Close();
+                
+                
             }
         }
 
