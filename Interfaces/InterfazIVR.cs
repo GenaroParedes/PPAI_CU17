@@ -69,6 +69,11 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
