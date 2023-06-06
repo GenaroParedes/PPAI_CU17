@@ -84,7 +84,6 @@
             this.label1.Size = new System.Drawing.Size(332, 25);
             this.label1.TabIndex = 24;
             this.label1.Text = "Registrar Respuesta Operador";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox4
             // 
@@ -156,7 +155,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(425, 147);
+            this.label6.Location = new System.Drawing.Point(429, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 36;
@@ -168,7 +167,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(425, 107);
+            this.label7.Location = new System.Drawing.Point(429, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 20);
             this.label7.TabIndex = 34;
@@ -177,7 +176,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(712, 103);
+            this.button1.Location = new System.Drawing.Point(753, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 22);
             this.button1.TabIndex = 42;
@@ -195,6 +194,7 @@
             this.textBox6.Size = new System.Drawing.Size(409, 62);
             this.textBox6.TabIndex = 45;
             this.textBox6.Text = "Descripción.";
+            this.textBox6.Click += new System.EventHandler(this.textBox6_Click);
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button2
@@ -211,7 +211,7 @@
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(712, 151);
+            this.button3.Location = new System.Drawing.Point(756, 151);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 23);
             this.button3.TabIndex = 49;
@@ -233,7 +233,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(541, 106);
+            this.comboBox1.Location = new System.Drawing.Point(585, 103);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(143, 21);
             this.comboBox1.TabIndex = 50;
@@ -242,7 +242,7 @@
             // 
             this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(541, 151);
+            this.comboBox2.Location = new System.Drawing.Point(585, 151);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(143, 21);
             this.comboBox2.TabIndex = 51;

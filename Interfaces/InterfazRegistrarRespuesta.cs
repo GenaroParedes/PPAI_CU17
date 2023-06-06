@@ -190,7 +190,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
         private void VerificarHabilitarButton2()
         {
             bool accionSeleccionada = comboBox3.SelectedItem != null;
-            bool textoIngresado = textBox6.Text.Trim() != "Descripcion";
+            bool textoIngresado = textBox6.Text.Trim() != "Descripcion.";
             button2.Enabled = accionSeleccionada && textoIngresado;
         }
 
@@ -243,9 +243,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void textBox6_Click(object sender, EventArgs e)
         {
-
+            textBox6.Text = "";
         }
     }
 }
