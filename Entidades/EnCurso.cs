@@ -14,7 +14,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.nombre = nombre;
         }
 
-        public void finalizar(DateTime fechaHoraActual, Llamada llamada)
+        public override void finalizar(DateTime fechaHoraActual, Llamada llamada)
         {
             Estado nuevoEstado = crearProximoEstado();
             CambioEstado nuevoCambioEstado = crearCambioEstado(fechaHoraActual, nuevoEstado);
@@ -24,14 +24,14 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         
         }
 
-        public Estado crearProximoEstado()
+        public override Estado crearProximoEstado()
         {
             Finalizada nuevoEstado = new Finalizada("Finalizada"); //REVISAR
             return nuevoEstado;
 
         }
 
-        public CambioEstado crearCambioEstado(DateTime fechaHoraInicio, Estado estado)
+        public override CambioEstado crearCambioEstado(DateTime fechaHoraInicio, Estado estado)
         {
             CambioEstado nuevoCambioEstado = new CambioEstado(fechaHoraInicio, estado);
             return nuevoCambioEstado;

@@ -67,7 +67,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             string tiempo2 = obtenerFechaHoraActual();
             llamada1.calcularDuracion(tiempo1, tiempo2);
             llamada1.finalizar(tiempo2, respuestaSeleccionada); // se crea el estado finalizada
-            Console.WriteLine(llamada.estado);
             finCU();
         }
 

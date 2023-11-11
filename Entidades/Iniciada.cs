@@ -17,11 +17,11 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         public string Nombre { get; set; }
 
 
-        public void tomadaPorOperador(DateTime fechaHoraActual, Llamada llamada) 
+        public override void tomadaPorOperador(DateTime fechaHoraActual, Llamada llamada) 
         {
 
             Estado nuevoEstado = crearProximoEstado();
-            CambioEstado nuevoCambioEstado = crearCambioEstado(nuevoEstado, fechaHoraActual);
+            CambioEstado nuevoCambioEstado = crearCambioEstado(fechaHoraActual, nuevoEstado);
 
             llamada.setCambioEstado(nuevoCambioEstado);
             llamada.setEstadoLlamada(nuevoEstado);
@@ -29,7 +29,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 
         }
 
-        public Estado crearProximoEstado() 
+        public override Estado crearProximoEstado() 
         {
 
             EnCurso nuevoEstado = new EnCurso("En Curso"); //REVISAR
@@ -37,7 +37,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 
         }
 
-        public CambioEstado crearCambioEstado(Estado estadoEnCurso, DateTime fechaHoraInicio)
+        public override CambioEstado crearCambioEstado(DateTime fechaHoraInicio, Estado estadoEnCurso)
         {
 
             CambioEstado nuevoCambioEstado = new CambioEstado(fechaHoraInicio, estadoEnCurso);

@@ -12,5 +12,15 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         {
             this.nombre = nombre;
         }
+
+        public override CambioEstado crearCambioEstado(DateTime fechaInicio, Estado estado)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Estado crearProximoEstado()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -73,7 +73,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
             Cliente cliente = new Cliente("23097372", "Juan Pérez", "9q9999", informacionClientes);
 
-            Estado estado = new Iniciada("Iniciada");
+            Iniciada estado = new Iniciada("Iniciada");
 
             DateTime tiempo1 = new DateTime(1, 1, 1, 1, 1, 1);
 

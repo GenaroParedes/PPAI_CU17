@@ -33,26 +33,17 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             return this.nombre;
         }
 
-        public void tomadaPorOperador(DateTime fechaHoraActual, Llamada llamada)
-        {
-            return;
-        }
+        public virtual void tomadaPorOperador(DateTime fechaHoraActual, Llamada llamada) { }
 
-        public void finalizar(DateTime fechaHoraActual, Llamada llamada)
-        {
 
-            return;
-        }
+        public virtual void finalizar(DateTime fechaHoraActual, Llamada llamada) { }
 
-        public void crearProximoEstado()
-        {
-            return;
-        }
 
-        public void crearCambioEstado()
-        {
-            return;
-        }
+        public abstract Estado crearProximoEstado();
+
+
+        public abstract CambioEstado crearCambioEstado(DateTime fechaInicio, Estado estado);
+
 
 
 
