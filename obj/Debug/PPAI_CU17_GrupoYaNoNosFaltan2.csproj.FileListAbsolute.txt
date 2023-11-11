@@ -9,3 +9,8 @@ E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.Gener
 E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CoreCompileInputs.cache
 E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
 E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+E:\PPAI Entrega 2\PPAI_CU17\bin\Debug\EntityFramework.dll
+E:\PPAI Entrega 2\PPAI_CU17\bin\Debug\EntityFramework.SqlServer.dll
+E:\PPAI Entrega 2\PPAI_CU17\bin\Debug\EntityFramework.xml
+E:\PPAI Entrega 2\PPAI_CU17\bin\Debug\EntityFramework.SqlServer.xml
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CopyComplete

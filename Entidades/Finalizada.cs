@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 {
-    internal class Finalizada : Estado
+    public class Finalizada : Estado
     {
         public Finalizada(string nombre) : base(nombre)
         {
