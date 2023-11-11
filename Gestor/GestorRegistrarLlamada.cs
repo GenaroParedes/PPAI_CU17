@@ -73,7 +73,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
 
             Cliente cliente = new Cliente("23097372", "Juan Pérez", "9q9999", informacionClientes);
 
-            Estado estado = new Estado("Iniciada");
+            Estado estado = new Iniciada("Iniciada");
 
             DateTime tiempo1 = new DateTime(1, 1, 1, 1, 1, 1);
 
@@ -81,7 +81,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
             List<CambioEstado> historialEstados = new List<CambioEstado>();
             historialEstados.Add(cambioEstado);
             Llamada llamada = new Llamada("Sin descripción", "Sin acción req", TimeSpan.Zero, false, "Sin observación",
-                     cliente, subOpcion, opcionLlamada1, historialEstados);
+                     cliente, subOpcion, opcionLlamada1, historialEstados, estado);
 
             
 

@@ -1,0 +1,11 @@
+E:\PPAI Entrega 2\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe.config
+E:\PPAI Entrega 2\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+E:\PPAI Entrega 2\PPAI_CU17\bin\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.AssemblyReference.cache
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.NewFolder1.InterfazIVR.resources
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Interfaces.InterfazRegistrarRespuesta.resources
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.Properties.Resources.resources
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.GenerateResource.cache
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.csproj.CoreCompileInputs.cache
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.exe
+E:\PPAI Entrega 2\PPAI_CU17\obj\Debug\PPAI_CU17_GrupoYaNoNosFaltan2.pdb

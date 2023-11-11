@@ -49,8 +49,11 @@
     <Compile Include="Entidades\CambioEstado.cs" />
     <Compile Include="Entidades\Categoria.cs" />
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\EnCurso.cs" />
     <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\Finalizada.cs" />
     <Compile Include="Entidades\InformacionCliente.cs" />
+    <Compile Include="Entidades\Iniciada.cs" />
     <Compile Include="Entidades\Llamada.cs" />
     <Compile Include="Entidades\OpcionLlamada.cs" />
     <Compile Include="Entidades\SubOpcionLlamada.cs" />

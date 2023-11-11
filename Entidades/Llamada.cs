@@ -23,12 +23,15 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         public SubOpcionLlamada subOpcionLlamada { get; set; }
         public OpcionLlamada opcionLlamada { get; set; }
         public List<CambioEstado> cambioDeEstado { get; set; }
+        public Estado estado { get; set; }
+
+        // estado
 
         // Constructor
         public Llamada(string descripcionOperador, string detalleAccionRequerida, TimeSpan duracion,
             bool encuestaEnviada, string observacionAuditor, Cliente cliente,
             SubOpcionLlamada subOpcionLlamada, OpcionLlamada opcionLlamada,
-            List<CambioEstado> cambioDeEstado)
+            List<CambioEstado> cambioDeEstado, Estado estado)
         {
             // Inicializar atributos
             this.descripcionOperador = descripcionOperador;
@@ -42,8 +45,21 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.subOpcionLlamada = subOpcionLlamada;
             this.opcionLlamada = opcionLlamada;
             this.cambioDeEstado = cambioDeEstado; // Cambiado por el new
+            this.estado = estado;
         }
         //Metodos de Seteo
+
+        public void setCambioEstado(CambioEstado estado)
+        {
+            this.cambioDeEstado.Add(estado);
+        }
+
+        public void setEstadoLlamada(Estado estado)
+        {
+
+            this.estado = estado;
+
+        }
 
         public void setDescripcionOperador(string descripcionOperador)
         {
@@ -92,11 +108,10 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         }
 
         // Métodos
-        public void tomadaPorOperador(Estado estado, string fechaHoraActual)
+        public void tomadaPorOperador(string fechaHoraActual)
         {
             DateTime fechaFormateada = DateTime.Parse(fechaHoraActual);
-            CambioEstado nuevoCE = new CambioEstado(fechaFormateada, estado);
-            cambioDeEstado.Add(nuevoCE);
+            this.estado.tomadaPorOperador(fechaFormateada, this);
         }
 
         public string getCliente()
@@ -124,12 +139,11 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             DateTime Fin = DateTime.Parse(fechaHoraFinalizada);
             this.duracion = Fin - Inicio;
         }
-        public void finalizar(Estado estado, string fechaHoraActual, string respuesta)
+        public void finalizar(string fechaHoraActual, string respuesta)
         {
             this.descripcionOperador = respuesta;
             DateTime fechaFormateada = DateTime.Parse(fechaHoraActual);
-            CambioEstado nuevoCE = new CambioEstado(fechaFormateada, estado);
-            cambioDeEstado.Add(nuevoCE);
+            this.estado.finalizar(fechaFormateada, this);
         }
     }
 

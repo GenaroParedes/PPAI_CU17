@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 {
-    public class Estado
+    public abstract class Estado
     {
         // Atributos
         public string nombre { get; set; }
@@ -18,6 +18,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.nombre = nombre;
         }
 
+        /*
         public static Estado Iniciado { get; } = new Estado("Iniciada");
         public static Estado EnCurso { get; } = new Estado("EnCurso");
         public static Estado Finalizada { get; } = new Estado("Finalizada");
@@ -26,13 +27,37 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
         {
             Iniciado, EnCurso, Finalizada
         };
-
+        */
         public string getNombre()
         {
             return this.nombre;
         }
 
+        public void tomadaPorOperador(DateTime fechaHoraActual, Llamada llamada)
+        {
+            return;
+        }
+
+        public void finalizar(DateTime fechaHoraActual, Llamada llamada)
+        {
+
+            return;
+        }
+
+        public void crearProximoEstado()
+        {
+            return;
+        }
+
+        public void crearCambioEstado()
+        {
+            return;
+        }
+
+
+
         // Métodos
+        /*
         public static Estado esEnCurso()
         {
             foreach (Estado estado in estados)
@@ -44,7 +69,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             }
             return null;
         }
-
+        
         public static Estado esFinalizada()
         {
             foreach (Estado estado in estados)
@@ -65,7 +90,7 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             }
             return false;
         }
-       
+       */
     }
 
 }

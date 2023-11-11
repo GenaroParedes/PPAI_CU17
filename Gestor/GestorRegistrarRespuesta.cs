@@ -58,17 +58,16 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Gestor
         // El controlador recibe los datos de la llamada e inicia la ejecución del CU:
         public void nuevaRespuestaOperador(Llamada llamada1, Categoria categoria, GestorRegistrarRespuesta gestorRegistrarRespuesta)
         {
-            Estado estado = Estado.esEnCurso();
             string tiempo1 = obtenerFechaHoraActual();
-            llamada1.tomadaPorOperador(estado, tiempo1);
+            llamada1.tomadaPorOperador(tiempo1);
             buscarDatosLlamada(llamada1, categoria);
             InterfazRegistrarRespuesta interfazRegistrarLlamada = new InterfazRegistrarRespuesta(llamada1, gestorRegistrarRespuesta);
             interfazRegistrarLlamada.mostrarDatos(datosLlamada);
             // Cuando se cierre la interfaz:
-            estado = Estado.esFinalizada();
             string tiempo2 = obtenerFechaHoraActual();
             llamada1.calcularDuracion(tiempo1, tiempo2);
-            llamada1.finalizar(estado, tiempo2, respuestaSeleccionada); // se crea el estado finalizada
+            llamada1.finalizar(tiempo2, respuestaSeleccionada); // se crea el estado finalizada
+            Console.WriteLine(llamada.estado);
             finCU();
         }
 
