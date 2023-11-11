@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -10,6 +12,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
     public class Cliente
     {
         // Atributos
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int IdCliente { get; set; }
         public string dni { get; set; }
         public string nombreCompleto { get; set; }
         public string numeroCelular { get; set; }

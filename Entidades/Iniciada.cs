@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +10,10 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
 {
     public class Iniciada : Estado
     {
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int IdEstado { get; set; }
         public Iniciada(string nombre) : base(nombre)
         {
             this.nombre = nombre;

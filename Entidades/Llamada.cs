@@ -2,6 +2,8 @@
 using PPAI_CU17_GrupoYaNoNosFaltan2.Gestor;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,14 +14,16 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
     public class Llamada
     {
         // Atributos
+        public int IdLlamada { get; set; }
         public string descripcionOperador { get; set; }
         public string detalleAccionRequerida { get; set; }
         public TimeSpan duracion { get; set; }
         public bool encuestaEnviada { get; set; }
         public string observacionAuditor { get; set; }
 
+
         // Relaciones
-        public Cliente cliente { get; set; }
+        public virtual Cliente cliente { get; set; }
         public SubOpcionLlamada subOpcionLlamada { get; set; }
         public OpcionLlamada opcionLlamada { get; set; }
         public List<CambioEstado> cambioDeEstado { get; set; }
@@ -146,7 +150,6 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
             this.estado.finalizar(fechaFormateada, this);
         }
     }
-
 }
 
    

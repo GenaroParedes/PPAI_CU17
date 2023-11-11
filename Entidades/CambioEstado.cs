@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +11,9 @@ namespace PPAI_CU17_GrupoYaNoNosFaltan2.Entidades
     public class CambioEstado
     {
         // Atributos
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int IdCambioEstado { get; set; }
         public DateTime fechaHoraInicio { get; set; }
         // Relación
         public Estado estado { get; set; }
